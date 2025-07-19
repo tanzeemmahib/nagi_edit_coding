@@ -1,9 +1,11 @@
 const audio = document.getElementById("audio");
 const lyricsContainer = document.getElementById("lyrics");
+const bgVideo = document.getElementById("bg-video");
 
 const lyricsData = {
   chandelier: {
     src: "assets/chandelier.mp3",
+    video: "assets/chandelier_bg.mp4",
     lyrics: [
       { time: 0, text: "Party girls don't get hurt" },
       { time: 2, text: "Can't feel anything, when will I learn" },
@@ -56,6 +58,7 @@ const lyricsData = {
   },
   recognition: {
     src: "assets/recognition.mp3",
+    video: "assets/recognition_bg.mp4",
     lyrics: [
       { time: 0, text: "Roaches on the wall" },
       { time: 4, text: "Whole blunts in the ashtray" },
@@ -78,6 +81,7 @@ const lyricsData = {
   },
   nuts: {
     src: "assets/nuts.mp3",
+    video: "assets/nuts_bg.mp4",
     lyrics: [
       { time: 0, text: "Girl, I don't know what to say" },
       { time: 4, text: "I just wanna be with you" },
@@ -100,6 +104,13 @@ function playSong(songKey) {
   currentLyrics = song.lyrics;
   renderLyrics();
   audio.play();
+
+  // 🎥 Update background video
+  if (song.video) {
+    bgVideo.innerHTML = `<source src="${song.video}" type="video/mp4">`;
+    bgVideo.load();
+    bgVideo.play();
+  }
 }
 
 function renderLyrics() {
