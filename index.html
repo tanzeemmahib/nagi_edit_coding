@@ -4,34 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nagi Seshiro</title>
-
-  <!-- External Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet" />
-  
-  <!-- External CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Video Background -->
-  <video id="bg-video" autoplay muted loop playsinline></video>
-
-  <!-- UI Container -->
+  <video id="bg-video" autoplay loop muted>
+    <source src="assets/default.mp4" type="video/mp4" />
+  </video>
   <div class="container">
-    <h1 class="title">NAGI SESHIRO</h1>
-
-    <div class="song-list">
-      <div class="song" onclick="playSong('Chandelier')">Chandelier - Sia</div>
-      <div class="song" onclick="playSong('The Laws of Recognition')">The Laws of Recognition - Kyslingo</div>
-      <div class="song" onclick="playSong('Nuts')">Nuts - Lil Peep</div>
+    <h1>NAGI SESHIRO</h1>
+    <div class="button-container">
+      <button onclick="playSong('chandelier')">Chandelier - Sia</button>
+      <button onclick="playSong('recognition')">The Laws of Recognition - Kyslingo</button>
+      <button onclick="playSong('nuts')">Nuts - Lil Peep</button>
     </div>
-
-    <div class="player">
-      <audio id="audio" controls></audio>
-      <div class="lyrics" id="lyrics">Pick a song and vibe...</div>
+    <audio id="audio" controls></audio>
+    <div class="lyrics-container">
+      <div id="lyrics"></div>
     </div>
   </div>
-
-  <!-- JS Script -->
   <script src="script.js"></script>
 </body>
 </html>
