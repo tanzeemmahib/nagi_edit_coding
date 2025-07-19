@@ -1,15 +1,12 @@
-
-/* 🌌 Global Styles */
 body {
   margin: 0;
   padding: 0;
   background: black;
-  font-family: 'Space Grotesk', sans-serif;
-  color: white;
-  overflow-x: hidden;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
 }
 
-/* 🎥 Background Video */
 #bg-video {
   position: fixed;
   top: 0;
@@ -18,78 +15,83 @@ body {
   height: 100vh;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(0.75) grayscale(0.1);
+  filter: brightness(0.25) contrast(1.2);
 }
 
-/* 🧱 Main Container */
 .container {
-  max-width: 800px;
-  margin: 80px auto;
-  padding: 30px;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 20px;
-  box-shadow: 0 0 20px #00bfff;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 2rem;
   text-align: center;
 }
 
-/* 🔠 Title */
 .title {
-  font-size: 3em;
-  color: #00bfff;
-  letter-spacing: 2px;
-  margin-bottom: 30px;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff;
 }
 
-/* 🎵 Song Buttons */
+.button-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .button-container button {
   background: transparent;
-  border: 2px solid #00bfff;
-  color: #00bfff;
-  padding: 12px 20px;
-  margin: 10px;
-  border-radius: 10px;
-  font-size: 1em;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s ease;
+  font-size: 1rem;
+  text-shadow: 0 0 10px #00ffff;
+  transition: all 0.3s ease;
 }
 
 .button-container button:hover {
-  background: #00bfff;
+  background: #00ffff;
   color: black;
+  box-shadow: 0 0 15px #00ffff, 0 0 40px #00ffff;
 }
 
-/* 🔊 Audio Player */
-audio {
+#audio {
   width: 100%;
-  margin: 20px 0;
-  border-radius: 30px;
-  box-shadow: 0 0 10px #00bfff;
+  max-width: 500px;
+  margin-bottom: 2rem;
 }
 
-/* 📜 Lyrics Styling */
 .lyrics-container {
-  max-height: 250px;
-  overflow-y: hidden;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid #00bfff;
+  height: 200px;
+  width: 100%;
+  max-width: 700px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
   border-radius: 12px;
-  padding: 20px;
-  font-size: 1.1em;
-  font-weight: 500;
-  line-height: 1.7em;
-  color: #d8f9ff;
-  text-align: center;
-  position: relative;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 .lyrics-line {
-  opacity: 0.3;
-  transition: all 0.4s ease;
+  font-size: 1.1rem;
+  padding: 0.4rem 0;
+  opacity: 0.5;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
 .lyrics-line.active {
-  opacity: 1;
-  font-weight: 700;
   color: #ffffff;
-  text-shadow: 0 0 8px #00bfff;
+  opacity: 1;
+  transform: scale(1.1);
+  font-weight: bold;
+  text-shadow: 0 0 8px #00ffff;
 }
