@@ -1,3 +1,5 @@
+
+/* 🌌 Global Styles */
 body {
   margin: 0;
   padding: 0;
@@ -7,39 +9,43 @@ body {
   overflow-x: hidden;
 }
 
-video#bg-video {
+/* 🎥 Background Video */
+#bg-video {
   position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
-  opacity: 0.3;
   z-index: -1;
+  filter: brightness(0.75) grayscale(0.1);
 }
 
+/* 🧱 Main Container */
 .container {
-  max-width: 700px;
-  margin: 60px auto;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.7);
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 20px;
   box-shadow: 0 0 20px #00bfff;
   text-align: center;
 }
 
-h1 {
-  font-size: 2.5em;
+/* 🔠 Title */
+.title {
+  font-size: 3em;
   color: #00bfff;
   letter-spacing: 2px;
   margin-bottom: 30px;
 }
 
+/* 🎵 Song Buttons */
 .button-container button {
   background: transparent;
   border: 2px solid #00bfff;
   color: #00bfff;
-  padding: 10px 18px;
+  padding: 12px 20px;
   margin: 10px;
   border-radius: 10px;
   font-size: 1em;
@@ -52,6 +58,7 @@ h1 {
   color: black;
 }
 
+/* 🔊 Audio Player */
 audio {
   width: 100%;
   margin: 20px 0;
@@ -59,14 +66,14 @@ audio {
   box-shadow: 0 0 10px #00bfff;
 }
 
+/* 📜 Lyrics Styling */
 .lyrics-container {
-  max-height: 220px;
+  max-height: 250px;
   overflow-y: hidden;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid #00bfff;
   border-radius: 12px;
   padding: 20px;
-  margin-top: 20px;
   font-size: 1.1em;
   font-weight: 500;
   line-height: 1.7em;
@@ -86,4 +93,3 @@ audio {
   color: #ffffff;
   text-shadow: 0 0 8px #00bfff;
 }
-
