@@ -107,9 +107,12 @@ function playSong(songKey) {
 
   // 🎥 Update background video
   if (song.video) {
-    bgVideo.innerHTML = `<source src="${song.video}" type="video/mp4">`;
-    bgVideo.load();
-    bgVideo.play();
+    bgVideo.pause();
+bgVideo.src = song.video;
+bgVideo.load();
+bgVideo.play().catch(e => {
+  console.log("Video autoplay blocked:", e);
+});
   }
 }
 
