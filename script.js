@@ -57,28 +57,29 @@ const lyricsData = {
     ]
   },
   recognition: {
-    src: "assets/recognition.mp3",
-    video: "assets/recognition_bg.mp4",
-    lyrics: [
-      { time: 0, text: "Roaches on the wall" },
-      { time: 4, text: "Whole blunts in the ashtray" },
-      { time: 8, text: "You lied to me bitch" },
-      { time: 12, text: "I'm gon' lie when you ask me" },
-      { time: 16, text: "You wanna be involved" },
-      { time: 20, text: "I don't want this pain at all" },
-      { time: 24, text: "I don't need to say shit to you" },
-      { time: 28, text: "My face gon' say it all" },
-      { time: 32, text: "Free Quan and Macho" },
-      { time: 36, text: "Hold my breath, smoke fronto" },
-      { time: 40, text: "Fresh to death" },
-      { time: 44, text: "Thank God for every breath" },
-      { time: 48, text: "Used Tinos still I step" },
-      { time: 52, text: "Remember duct tape when you get swept" },
-      { time: 56, text: "Halfway right girl halfway left" },
-      { time: 60, text: "I pray I do my best" },
-      { time: 64, text: "I pray that's like my vest" }
-    ]
-  },
+  src: "assets/recognition.mp3",
+  video: "assets/recognition_bg.mp4",
+  lyrics: [
+    { time: 24.0, text: "Roaches on the wall" },
+    { time: 29.7, text: "Whole blunts in the ashtray" },
+    { time: 35.4, text: "You lied to me bitch" },
+    { time: 41.2, text: "I'm gone lie when you ask me" },
+    { time: 46.9, text: "You wanna be involved" },
+    { time: 52.6, text: "I don't want this pain at all" },
+    { time: 58.3, text: "I don't need to say shit to you my face gone say it all" },
+    { time: 64.1, text: "Free Quan" },
+    { time: 69.8, text: "And Macho" },
+    { time: 75.5, text: "Hold my breathe" },
+    { time: 81.2, text: "Smoke fronto" },
+    { time: 86.9, text: "Fresh to death" },
+    { time: 92.7, text: "Thank god for every breathe" },
+    { time: 98.4, text: "Used tinos still i step" },
+    { time: 104.1, text: "Remember duck tape when you get swept" },
+    { time: 109.8, text: "Halfway right girl halfway left" },
+    { time: 115.6, text: "I pray i do my best" },
+    { time: 121.3, text: "I pray that's like my vest" }
+  ]
+}
   nuts: {
     src: "assets/nuts.mp3",
     video: "assets/nuts_bg.mp4",
